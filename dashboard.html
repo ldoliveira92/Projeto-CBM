@@ -4,27 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="darshboard.css">
-    <title>ABT-0536</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Dashboard</title>
 </head>
 
 <body>
     <!---O header vai conter um cabeçalho em cor diferente com o título e os links de início e logout-->
     <header>
-
-        <h1>
-            ABT-0536
-        </h1>
-
+        <h1>Dashboard de VTRs</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Início</a></li>
+                <li><a href="dashboard.html">Início</a></li>
+                <li><a href="https://docs.google.com/spreadsheets/d/1MfgqWVvzvDfgaGW6Ku4oLxc85h5YqVKsNVtyGiU4yS4/edit?usp=sharing">Histórico</a></li>
+                <li><a href="suporte.html">Suporte</a></li>
                 <li><a href="logout">Logout</a></li>
             </ul>
         </nav>
-
     </header>
+
     <!--O main vai conter cartões constando as viaturas, ao clicar em cada uma das viaturas será aberto seu menu contendo:
         - A foto da VTR
         - Prefixo
@@ -34,41 +34,104 @@
             - Destino
             - KM de chegada no destino e KM Final
             - -->
-    <main>
 
-        <section class="container">
+    <section class="container">
+        <div class="card">
+            <img src="./imgs/abt.jpeg" alt="ABT">
+            <!--VTR ABT-0536-->
+            <h3>
+                ABT-0536
+            </h3>
 
-            <div class="vtr">
+            <p>
+                Km Atual: 1234567 km
+                <br>
+                Último condutor: SD Leonardo
+            </p>
+            <button type="submit">Acessar</button>
+        </div>
+        <!--VTR AR-0468-->
+        <div class="card">
+            <img src="./imgs/ar.jpeg" alt="ABT">
 
-                <img src="./imgs/abt.jpeg" alt="ABT">
+            <h3>
+                AR-0468
+            </h3>
 
-                <h3>
-                    ABT-0536
-                </h3>
+            <p>
+                Km Atual: 111222 km
+                <br>
+                Último condutor: SD Valentim
+            </p>
+            <button type="submit">Acessar</button>
+        </div>
 
-                <p><b>Último KM:</b> 15000</p>
-                <p><b>Condutor:</b>SD Leonardo</p>
+        <div class="card">
+            <img src="./imgs/7987.jpg" alt="ABT">
+            <!--VTR ABT-7987-->
+            <h3>
+                ABT-7987
+            </h3>
 
-                <form>
+            <p>
+                Km Atual: 987654 km
+                <br>
+                Último condutor: SD Bolzan
+            </p>
+            <button type="submit">Acessar</button>
+        </div>
 
-                    <label for="data1">Data:</label>
-                    <input class="placeholder" type="date" id="data1" name="data1"><br>
+        <!--VTR ATP-1216-->
+        <div class="card">
+            <img src="./imgs/ar.jpeg" alt="ABT">
 
-                    <label for="destino1">Destino:</label>
-                    <input class="placeholder" type="text" id="destino1" name="destino1"><br>
+            <h3>
+                ATP-1216
+            </h3>
 
-                    <label for="km_final1">KM Final:</label>
-                    <input class="placeholder" type="number" id="km_final1" name="km_final1"><br>
+            <p>
+                Km Atual: 121212 km
+                <br>
+                Último condutor: 1ºSGT Soares
+            </p>
+            <button type="submit">Acessar</button>
+        </div>
 
-                    <button type="submit">Registrar</button>
+        <!--VTR ATP-9312-->
+        <div class="card">
+            <img src="./imgs/ar.jpeg" alt="ABT">
 
-                </form>
-            </div>
-        </section>
-        <footer>
+            <h3>
+                ATP-9312
+            </h3>
+
+            <p>
+                Km Atual: 234234 km
+                <br>
+                Último condutor: SD Severo
+            </p>
+            <button type="submit">Acessar</button>
+        </div>
+
+        <!--VTR ATP-6028-->
+        <div class="card">
+            <img src="./imgs/ar.jpeg" alt="ABT">
+
+            <h3>
+                ATP-6028
+            </h3>
+
+            <p>
+                Km Atual: 456789 km
+                <br>
+                Último condutor: SD Hertz
+            </p>
+            <button type="submit">Acessar</button>
+        </div>
+    </section>
+    <footer>
             <p>CBMRS. Todos os direitos reservados.</p> 
         </footer>
-    </main>
 </body>
 
 </html>

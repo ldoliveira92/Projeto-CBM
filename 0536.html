@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="0536.css">
+    <title>ABT-0536</title>
+</head>
+
+<body>
+    <!---O header vai conter um cabeçalho em cor diferente com o título e os links de início e logout-->
+    <header>
+
+        <h1>
+            ABT-0536
+        </h1>
+
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Início</a></li>
+                <li><a href="https://docs.google.com/spreadsheets/d/1MfgqWVvzvDfgaGW6Ku4oLxc85h5YqVKsNVtyGiU4yS4/edit?usp=sharing">Histórico</a></li>
+                <li><a href="suporte.html">Suporte</a></li>
+                <li><a href="logout">Logout</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <!--O main vai conter cartões constando as viaturas, ao clicar em cada uma das viaturas será aberto seu menu contendo:
+        - A foto da VTR
+        - Prefixo
+        - Última km registrada e último condutor
+        - E os campos para inserir:
+            - Data
+            - Destino
+            - KM de chegada no destino e KM Final
+            - -->
+    <main>
+
+        <section class="container">
+
+            <div class="vtr">
+
+                <img src="./imgs/abt.jpeg" alt="ABT">
+
+                <h3>
+                    ABT-0536
+                </h3>
+
+                <p><b>Último KM:</b> 15000</p>
+                <p><b>Último Condutor:</b>SD Leonardo</p>
+
+                <form>
+
+                    <label for="data1">Data:</label>
+                    <input class="placeholder" type="date" id="data1" name="data1">
+
+                    <label for="hora1">Hora:</label>
+                    <input class="placeholder" type="time" id="hora1" name="hora1">
+
+                    <label for="destino1">Destino:</label>
+                    <input class="placeholder" type="text" id="destino1" name="destino1">
+
+                    <label for="km_final1">KM Final:</label>
+                    <input class="placeholder" type="number" id="km_final1" name="km_final1">
+
+                    <button type="submit">Registrar</button>
+
+                </form>
+            </div>
+        </section>
+        <footer>
+            <p>CBMRS. Todos os direitos reservados.</p> 
+        </footer>
+    </main>
+</body>
+
+</html>
