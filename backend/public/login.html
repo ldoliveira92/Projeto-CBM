@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <title>Controle de Viaturas</title>
+</head>
+
+<body>
+    <div class="login-container">
+        <header>
+            <img src="./imgs/brasao.png" alt="CBMRS">
+        </header>
+
+        <main>
+            <h1>Controle de Viaturas</h1>
+            <form onsubmit="entrar(event)">
+                <input type="text" id="login" placeholder="ID Func">
+                <input type="password" id="senha" placeholder="Senha">
+                <button type="submit">Entrar</button>
+            </form>
+        </main>
+
+
+        <footer>
+            <p>CBMRS. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+async function entrar(event) {
+    event.preventDefault();
+
+    const login = document.getElementById("login").value;
+    const senha = document.getElementById("senha").value;
+
+    const resposta = await fetch("/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ login, senha })
+    });
+
+    const dados = await resposta.json();
+
+    if (dados.sucesso) {
+        window.location.href = "/dashboard";
+
+    } else {
+        alert(dados.erro);
+    }
+}
+</script>
+
+
+
+</body>
+
+</html>

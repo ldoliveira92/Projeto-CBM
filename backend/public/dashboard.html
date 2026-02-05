@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <!---O header vai conter um cabeçalho em cor diferente com o título e os links de início e logout-->
+    <header>
+        <h1>Dashboard de VTRs</h1>
+        <nav>
+            <!-- Ícone de hamburger para o menu em dispositivos móveis:
+             <input type="checkbox" id="check">
+                <label for="check">&#x2630;</label> -->
+            <ul>
+                <li><a href="/dashboard">Início</a></li>
+                <li><a href="suporte.html">Suporte</a></li>
+                <li><a href="/logout">Logout</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!--O main vai conter cartões constando as viaturas, ao clicar em cada uma das viaturas será aberto seu menu contendo:
+        - A foto da VTR
+        - Prefixo
+        - Última km registrada e último condutor
+        - E os campos para inserir:
+            - Data
+            - Hora
+            - Destino
+            - KM Final
+            - Abastecimento (quando houver)
+            - -->
+
+    <!--VTR ABT-0536-->
+    <section class="container">
+        <div class="card">
+            <img src="./imgs/abt.jpeg" alt="ABT">
+
+            <h3>
+                ABT-0536
+            </h3>
+
+            <p>
+                Km Atual: 1234567 km
+                <br>
+                Último condutor: SD Leonardo
+            </p>
+            <button onclick="window.location.href='0536.html'">Acessar</button>
+        </div>
+
+        <!--VTR AR-0468-->
+        <div class="card">
+            <img src="./imgs/ar.jpeg" alt="AR">
+
+            <h3>
+                AR-0468
+            </h3>
+
+            <p>
+                Km Atual: 111222 km
+                <br>
+                Último condutor: SD Valentim
+            </p>
+            <button onclick="window.location.href='0468.html'">Acessar</button>
+        </div>
+
+        <!--VTR ABT-7987-->
+        <div class="card">
+
+            <img src="./imgs/7987.jpg" alt="ABT">
+            <h3>
+                ABT-7987
+            </h3>
+            <p>
+                Km Atual: 987654 km
+                <br>
+                Último condutor: SD Bolzan
+            </p>
+            <button onclick="window.location.href='7987.html'">Acessar</button>
+        </div>
+
+        <!--VTR ATP-1216-->
+        <div class="card">
+
+            <img src="./imgs/l200.jpeg" alt="L200">
+            <h3>
+                ATP-1216
+            </h3>
+            <p>
+                Km Atual: 121212 km
+                <br>
+                Último condutor: 1ºSGT Soares
+            </p>
+            <button onclick="window.location.href='1216.html'">Acessar</button>
+        </div>
+
+        <!--VTR ATP-9312-->
+        <div class="card">
+
+            <img src="./imgs/duster.jpeg" alt="Duster">
+            <h3>
+                ATP-9312
+            </h3>
+            <p>
+                Km Atual: 234234 km
+                <br>
+                Último condutor: SD Severo
+            </p>
+            <button onclick="window.location.href='9312.html'">Acessar</button>
+        </div>
+
+        <!--VTR ATP-6028-->
+        <div class="card">
+
+            <img src="./imgs/prisma.jpeg" alt="Prisma">
+            <h3>
+                ATP-6028
+            </h3>
+            <p>
+                Km Atual: 456789 km
+                <br>
+                Último condutor: SD Hertz
+            </p>
+            <button onclick="window.location.href='6028.html'">Acessar</button>
+        </div>
+    </section>
+    <footer>
+        <p>CBMRS. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
