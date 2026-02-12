@@ -132,6 +132,15 @@ app.get("/logout", (req, res) => {
     });
 });
 
+app.get("/viaturas", (req, res) => {
+    db.all("SELECT * FROM viaturas", (err, rows) => {
+        if (err) {
+            return res.status(500).json({ erro: "Erro ao buscar viaturas" });
+        }
+        res.json(rows);
+    });
+});
+
 
 app.listen(3000, () => {
     console.log("🔥 Servidor rodando em http://localhost:3000");
